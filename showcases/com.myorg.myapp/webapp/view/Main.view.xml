@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="com.myorg.myapp.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+  xmlns:control="com.myorg.myapp.control"
+	core:require="{
+		formatter: 'com/myorg/myapp/model/formatter'
+	}">
+
+	<Page
+		title="{i18n>appTitle}"
+		id="page">
+		<content>
+      <control:Badge text="Hello World 123" color="secondary"/>
+			<control:Button text="Hello World 123" click="alert('xxx')"/>
+		</content>
+	</Page>
+
+</mvc:View>

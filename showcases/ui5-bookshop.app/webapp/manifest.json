@@ -1,0 +1,47 @@
+{
+  "sap.app": {
+    "id": "ui5-bookshop.app",
+    "type": "application",
+    "title": "Web Component App implmeneting a Bookshop",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "bookshop": {
+        "uri": "/bookshop/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.124.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "kickstand-ui.components": {}
+      }
+    },
+    "models": {
+      "": {
+        "dataSource": "bookshop",
+        "preload": true,
+        "settings": {
+          "groupId": "$auto",
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5-bookshop.app.i18n.i18n"
+        }
+      }
+    }
+  }
+}

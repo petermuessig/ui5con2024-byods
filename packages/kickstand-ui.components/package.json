@@ -1,0 +1,35 @@
+{
+	"name": "kickstand-ui.components",
+	"version": "1.0.0",
+	"description": "UI5 Library: kickstand-ui.components",
+	"author": "Peter Muessig",
+	"license": "n/a",
+	"private": true,
+	"scripts": {
+		"clean": "rimraf dist coverage",
+		"build": "ui5 build --clean-dest",
+		"start": "ui5 serve -o test-resources/kickstand-ui/components/KitchenSink.html",
+		"start:dist": "npm start -- --config ui5-dist.yaml -o test-resources/kickstand-ui/components/KitchenSink-cdn.html",
+		"testsuite": "ui5 serve -o test-resources/kickstand-ui/components/qunit/testsuite.qunit.html",
+		"lint": "eslint src test",
+		"karma": "karma start",
+		"karma-ci": "karma start karma-ci.conf.js",
+		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
+		"test": "npm run lint && npm run karma-ci-cov",
+		"generate:old": "node lib/generate.js",
+		"generate": "stencil-ui5-generator kickstand-ui kickstand-ui.components ./src ./tmpl"
+	},
+	"devDependencies": {
+		"@ui5/cli": "^3.10.3",
+		"eslint": "^8.57.0",
+		"karma": "^6.4.3",
+		"karma-chrome-launcher": "^3.2.0",
+		"karma-coverage": "^2.2.1",
+		"karma-ui5": "^3.0.4",
+    "kickstand-ui": "^2.18.5",
+		"rimraf": "^5.0.7",
+		"stencil-ui5-generator": "../stencil-ui5-generator",
+		"ui5-middleware-livereload": "^3.0.3",
+		"ui5-tooling-modules": "^3.6.1"
+	}
+}

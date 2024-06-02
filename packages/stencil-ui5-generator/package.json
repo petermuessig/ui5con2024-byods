@@ -1,0 +1,13 @@
+{
+	"name": "stencil-ui5-generator",
+	"version": "1.0.0",
+	"description": "Generator to create UI5 Control wrappers for Stencil Web Components",
+	"type": "module",
+	"author": "Peter Muessig",
+	"license": "n/a",
+	"private": "true",
+	"bin": "lib/generate.js",
+	"dependencies": {
+		"ejs": "^3.1.10"
+	}
+}

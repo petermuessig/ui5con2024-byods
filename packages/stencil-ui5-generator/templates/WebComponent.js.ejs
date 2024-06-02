@@ -1,0 +1,53 @@
+/*!
+ * ${copyright}
+ */
+
+// THE FILE HAS BEEN GENERATED! CHANGES WILL BE LOST!
+sap.ui.define([
+	"./_StencilComponent",
+	//"<%= npmPackage %>/dist/components/<%= clazz.is %>"
+], function(StencilComponent, <%= clazz.shortName %>) {
+	"use strict";
+
+	// define the custom element tag
+	//<%= clazz.shortName %>.defineCustomElement();
+
+	return StencilComponent.extend("<%= namespace %>.<%= clazz.shortName %>", {
+
+		metadata: {
+			tag: "<%= clazz.is %>",
+			properties: {<% clazz.metadata.properties?.forEach((property) => { %>
+				// <%= property.description %>
+				<%= property.name %>: {
+					type: "<%= property.type %>",<% if (property.mappingType || property.attribute) { %>
+					mapping: {<% if (property.mappingType) { %>
+						type: "<%= property.mappingType %>"<% } else { %>
+						to: "<%= property.attribute %>"<% } %>
+					},<% } %><% if (property.defaultValue) { %>
+					defaultValue: <%- property.defaultValue %><% } %>
+				},<% }) %>
+			},<% if (clazz.metadata.aggregations?.length > 0) { %><% if (clazz.metadata.defaultAggregation) { %>
+			defaultAggregation: "<%= clazz.metadata.defaultAggregation %>",<% } %>
+			aggregations: {<% clazz.metadata.aggregations.forEach((aggregation) => { %>
+				// <%= aggregation.description %>
+				<%= aggregation.name %>: {
+					type: "sap.ui.core.Control",
+					multiple: true<% if (aggregation.slotName) { %>,
+					slot: "<%= aggregation.slotName %>"<% } %>
+				},<% }) %>
+			},<% } %>
+			events: {<% clazz.metadata.events?.forEach((event) => { %>
+				// <%= event.docs.text %>
+				<%= event.name %>: {},<% }) %>
+				// native click event
+				click: {}
+			},<% if (clazz.metadata.methods?.length > 0) { %>
+			methods: [<% clazz.metadata.methods.forEach((method) => { %>
+				// <%= method.docs.text %>
+				"<%= method.name %>",<% }) %>
+			],<% } %>
+		}
+
+	});
+
+});

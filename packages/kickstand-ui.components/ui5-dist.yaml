@@ -1,0 +1,16 @@
+specVersion: "3.0"
+metadata:
+  name: kickstand-ui.components
+type: library
+resources:
+  configuration:
+    paths:
+      src: dist/resources/kickstand-ui/components/
+      test: dist/test-resources/kickstand-ui/components/
+framework:
+  name: OpenUI5
+  version: "1.120.15"
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+      optional: true

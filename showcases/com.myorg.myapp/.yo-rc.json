@@ -1,0 +1,17 @@
+{
+  "generator-ui5-app": {
+    "namespace": "com.myorg.myapp",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.120.15",
+    "author": "Peter Muessig",
+    "initrepo": false,
+    "appId": "com.myorg.myapp",
+    "appURI": "com/myorg/myapp",
+    "cdnDomain": "sdk.openui5.org",
+    "defaultTheme": "sap_horizon",
+    "qunitCoverageFile": "qunit-coverage-istanbul.js",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "setupCompleted": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "bring-your-own-design-system",
+  "description": "Mono repo to showcase the consumption of Web Components in UI5 via UI libraries",
+  "private": true,
+  "scripts": {
+    "build": "npm run build -w com.myorg.myapp",
+    "build:lib": "npm run build -w kickstand-ui.components",
+    "build:bookshop": "npm run build -w ui5-bookshop.app",
+    "generate:lib": "npm run generate -w kickstand-ui.components",
+    "start": "npm run start -w com.myorg.myapp",
+    "start:lib": "npm run start -w kickstand-ui.components",
+    "start:bookshop": "npm run start -w ui5-bookshop.app"
+  },
+  "workspaces": [ "packages/*", "showcases/*" ]
+}

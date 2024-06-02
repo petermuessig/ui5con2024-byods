@@ -1,0 +1,35 @@
+<mvc:View xmlns="kickstand-ui.components" xmlns:mvc="sap.ui.core.mvc" controllerName="ui5-bookshop.app.controller.WebCApp">
+  <MenuBar tagline="Bookshop Viewer" />
+  <Row gutter="xl" class="m-sm">
+    <Column>
+      <Alert text="Hello, UI5er! 👋" icon="info_fill"/>
+    </Column>
+  </Row>
+  <Row gutter="xl" class="m-sm">
+    <Column>
+      <FormField placeholder="Search" icon="search" updated=".onSearch"/>
+    </Column>
+  </Row>
+  <Row gutter="xl" class="m-sm">
+    <Column>
+      <Row>
+        <Column class="text-md text-bold m-sm" text="{i18n>Book}"></Column>
+        <Column class="text-md text-bold m-sm" text="{i18n>Author}"></Column>
+        <Column class="text-md text-bold m-sm" text="{i18n>Genre}"></Column>
+        <Column class="text-md text-bold m-sm" text="{i18n>Price}"></Column>
+        <Column class="text-md text-bold m-sm" text="{i18n>Stock}"></Column>
+      </Row>
+      <Row id="booksTable" default="{/Books}">
+        <Column class="col-12 m-sm">
+          <Row>
+            <Column text="{title}"></Column>
+            <Column text="{author}"></Column>
+            <Column text="{genre/name}"></Column>
+            <Column text="{price}"></Column>
+            <Column text="{stock}"></Column>
+          </Row>
+        </Column>
+      </Row>
+    </Column>
+  </Row>
+</mvc:View>
